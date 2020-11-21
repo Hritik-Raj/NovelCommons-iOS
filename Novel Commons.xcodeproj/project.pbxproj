@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		589CC07E25671C1A00BCA796 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CC07D25671C1A00BCA796 /* LibraryView.swift */; };
 		589CC08C25671FF900BCA796 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CC08B25671FF900BCA796 /* Book.swift */; };
-		589CC0912567206400BCA796 /* bookData.json in Resources */ = {isa = PBXBuildFile; fileRef = 589CC0902567206400BCA796 /* bookData.json */; };
-		589CC0972567278000BCA796 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CC0962567278000BCA796 /* Data.swift */; };
+		589CC0AB2568788000BCA796 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CC0AA2568788000BCA796 /* Page.swift */; };
+		589CC0B525687F6700BCA796 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589CC0B425687F6700BCA796 /* BookDetail.swift */; };
 		58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC91255218B200E27903 /* AppDelegate.swift */; };
 		58E6FC94255218B200E27903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC93255218B200E27903 /* ContentView.swift */; };
 		58E6FC96255218B200E27903 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC95255218B200E27903 /* Experience.rcproject */; };
@@ -40,8 +40,8 @@
 /* Begin PBXFileReference section */
 		589CC07D25671C1A00BCA796 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		589CC08B25671FF900BCA796 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		589CC0902567206400BCA796 /* bookData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookData.json; sourceTree = "<group>"; };
-		589CC0962567278000BCA796 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		589CC0AA2568788000BCA796 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		589CC0B425687F6700BCA796 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		58E6FC8E255218B200E27903 /* Novel Commons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novel Commons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FC91255218B200E27903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E6FC93255218B200E27903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				589CC08B25671FF900BCA796 /* Book.swift */,
-				589CC0962567278000BCA796 /* Data.swift */,
+				589CC0AA2568788000BCA796 /* Page.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,7 +94,6 @@
 		589CC09E2567290300BCA796 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				589CC0902567206400BCA796 /* bookData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,6 +124,7 @@
 				58E6FC91255218B200E27903 /* AppDelegate.swift */,
 				58E6FC93255218B200E27903 /* ContentView.swift */,
 				589CC07D25671C1A00BCA796 /* LibraryView.swift */,
+				589CC0B425687F6700BCA796 /* BookDetail.swift */,
 				589CC0952567270400BCA796 /* Models */,
 				589CC09E2567290300BCA796 /* Resources */,
 				58E6FC95255218B200E27903 /* Experience.rcproject */,
@@ -264,7 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589CC0912567206400BCA796 /* bookData.json in Resources */,
 				58E6FC9B255218CC00E27903 /* Preview Assets.xcassets in Resources */,
 				58E6FC98255218CC00E27903 /* Assets.xcassets in Resources */,
 			);
@@ -292,9 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				589CC07E25671C1A00BCA796 /* LibraryView.swift in Sources */,
-				589CC0972567278000BCA796 /* Data.swift in Sources */,
+				589CC0B525687F6700BCA796 /* BookDetail.swift in Sources */,
 				58E6FC94255218B200E27903 /* ContentView.swift in Sources */,
 				58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */,
+				589CC0AB2568788000BCA796 /* Page.swift in Sources */,
 				589CC08C25671FF900BCA796 /* Book.swift in Sources */,
 				58E6FC96255218B200E27903 /* Experience.rcproject in Sources */,
 			);
