@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @State private var searchTerm : String = ""
     var body: some View {
         NavigationView {
-            List(bookData) { book in
-                NavigationLink(destination: BookDetail(book: book)) {
+            List(book_Data) { book in
+                NavigationLink(destination: Book_Detail(book: book)) {
                     Text(book.title)
                 }
             }
             .navigationBarTitle(Text("Books"))
-            // need button to create book
         }
     }
 }
@@ -24,6 +24,5 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
     }
 }

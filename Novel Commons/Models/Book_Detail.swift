@@ -1,12 +1,13 @@
 //
-//  BookDetail.swift
+//  Book_Detail.swift
 //  Novel Commons
 //
-//  Created by Pudding on 11/20/20.
+//  Created by Hritik Raj on 11/20/20.
 //
+
 import SwiftUI
 
-struct BookDetail: View {
+struct Book_Detail: View {
     var book: Book
     var body: some View {
         // Needs buttons to edit/delete
@@ -21,7 +22,7 @@ struct BookDetail: View {
         VStack() {
             if (book.pages!.count > 0) {
                 List(book.pages!) { page in
-                    NavigationLink(destination: PageDetail(page: page)) {
+                    NavigationLink(destination: Page_Detail(page: page)) {
                         Text("Page " + String(page.num))
                     }
                 }
@@ -34,27 +35,8 @@ struct BookDetail: View {
     }
 }
 
-struct BookDetail_Previews: PreviewProvider {
+struct Book_Detail_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetail(book: bookData[1])
-    }
-}
-
-struct PageDetail: View {
-    var page: Page
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text("Page " + String(page.num))
-                .font(.title)
-            Text(page.book!.title)
-                .font(.subheadline)
-        }
-    }
-}
-
-struct PageDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        PageDetail(page: Page(id: 0, num: 0))
+        Book_Detail(book: book_Data[0])
     }
 }
