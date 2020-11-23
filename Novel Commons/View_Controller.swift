@@ -1,5 +1,5 @@
 //
-//  View_Controller.swift
+//  ViewController.swift
 //  Novel Commons
 //
 //  Created by Hritik Raj on 11/20/20.
@@ -33,24 +33,24 @@ class ViewRouter: ObservableObject {
     }
 }
 
-struct View_Controller: View {
+struct ViewController: View {
     @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         if viewRouter.currentView == "view_book" {
-            Book_Detail(book: viewRouter.currentBook)
+            BookDetail(book: viewRouter.currentBook)
         }
         if viewRouter.currentView == "view_page" {
-            Page_Detail(page: viewRouter.currentPage)
+            PageDetail(page: viewRouter.currentPage)
         }
         if viewRouter.currentView == "view_note" {
-            Note_Detail(note: viewRouter.currentNote)
+            NoteDetail(note: viewRouter.currentNote)
         }
     }
 }
 
 
-struct View_Controller_Previews: PreviewProvider {
+struct ViewController_Previews: PreviewProvider {
     static var previews: some View {
-        View_Controller()
+        ViewController()
     }
 }
