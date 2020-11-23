@@ -1,12 +1,12 @@
 //
-//  Note_Detail.swift
+//  NoteDetail.swift
 //  Novel Commons
 //
 //  Created by Hritik Raj on 11/20/20.
 //
 import SwiftUI
 
-struct Note_Detail: View {
+struct NoteDetail: View {
     var note: Notes
     var body: some View {
         VStack(alignment: .leading) {
@@ -19,8 +19,8 @@ struct Note_Detail: View {
 }
 
 
-struct Note_Detail_Previews: PreviewProvider {
+struct NoteDetail_Previews: PreviewProvider {
     static var previews: some View {
-        Note_Detail(note: note_Data[0])
+        NoteDetail(note: note_Data[0])
     }
 }
