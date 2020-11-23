@@ -1,12 +1,12 @@
 //
-//  Page_Detail.swift
+//  PageDetail.swift
 //  Novel Commons
 //
 //  Created by Hritik Raj on 11/20/20.
 //
 import SwiftUI
 
-struct Page_Detail: View {
+struct PageDetail: View {
     var page: Page
 
     var body: some View {
@@ -16,7 +16,7 @@ struct Page_Detail: View {
 //        }
 //        NavigationView {
 //            List(note_Data) { note in
-//                NavigationLink(destination: Note_Detail(book: book)) {
+//                NavigationLink(destination: NoteDetail(book: book)) {
 //                    Text(note.title)
 //                }
 //            }
@@ -26,7 +26,7 @@ struct Page_Detail: View {
         VStack() {
             if (page.notes!.count > 0) {
                 List(page.notes!) { note in
-                    NavigationLink(destination: Note_Detail(note: note)) {
+                    NavigationLink(destination: NoteDetail(note: note)) {
                         Text("Note " + String(note.num))
                     }
                     .navigationBarTitle(Text("Notes"))
@@ -39,8 +39,8 @@ struct Page_Detail: View {
     }
 }
 
-struct Page_Detail_Previews: PreviewProvider {
+struct PageDetail_Previews: PreviewProvider {
     static var previews: some View {
-        Page_Detail(page: Page(id: 0, num: 0))
+        PageDetail(page: Page(id: 0, num: 0))
     }
 }
