@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreLocation
 
-struct Notes: Hashable, Codable, Identifiable {
+struct Notes: Identifiable {
     var id: Int
     var num: Int
     var text: String
@@ -51,4 +51,4 @@ var note3 = Notes (
     text: "BEST. PAGE. EVER"
    )
 
-var note_Data = [note1, note2, note3]
+var noteData = [note1, note2, note3]
