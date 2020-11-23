@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1092000524568-ja32er4d5arvfn3hu9nr42g8an8mpda8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1092000524568-ja32er4d5arvfn3hu9nr42g8an8mpda8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC2z4g2kkq_UCVHsTg4StTMacovwlmu3qU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1092000524568</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Novel-Commons.Novel-Commons</string>
+	<key>PROJECT_ID</key>
+	<string>novel-commons</string>
+	<key>STORAGE_BUCKET</key>
+	<string>novel-commons.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1092000524568:ios:ed1ce509c5cdb36dc2d66d</string>
+	<key>DATABASE_URL</key>
+	<string>https://novel-commons.firebaseio.com</string>
+</dict>
+</plist>
