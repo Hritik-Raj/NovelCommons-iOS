@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreLocation
 
-struct Notes: Identifiable {
+struct Note: Identifiable {
     var id: Int
     var num: Int
     var text: String
@@ -34,18 +34,18 @@ struct Notes: Identifiable {
 //    }
 //}
 
-var note1 = Notes(
+var note1 = Note(
        id: 1,
        num: 13,
        text: "I love this page"
    )
-var note2 = Notes(
+var note2 = Note(
        id: 2,
        num: 15,
     text: "This page is even better"
     
    )
-var note3 = Notes (
+var note3 = Note (
        id: 3,
     num: 17,
     text: "BEST. PAGE. EVER"

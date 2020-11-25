@@ -15,12 +15,11 @@ struct Book: Identifiable {
     var pages: [Page]?
 }
 
-
  var book1 = Book(
         id: 1,
         title: "Working in Public",
         author: "Nadia Eghbal",
-    pages: [Page(id:3, num:19, notes: [Notes (
+    pages: [Page(id:3, num:19, notes: [Note (
         id: 3,
      num: 17,
      text: "BEST. PAGE. EVER"
@@ -30,7 +29,7 @@ var book2 = Book(
         id: 2,
         title: "Comprehension",
         author: "Walter Kintsch",
-    pages: [Page(id:1, num:13, notes: [Notes(
+    pages: [Page(id:1, num:13, notes: [Note(
         id: 1,
         num: 13,
         text: "I love this page"
@@ -40,7 +39,7 @@ var book2 = Book(
         id: 3,
         title: "Surfing Uncertainty",
         author: "Andy Clark",
-    pages: [Page(id:1, num:13, notes: [Notes(
+    pages: [Page(id:1, num:13, notes: [Note(
         id: 1,
         num: 13,
         text: "I love this page too"

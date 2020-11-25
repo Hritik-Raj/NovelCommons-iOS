@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct NoteDetail: View {
-    var note: Notes
+    var note: Note
     var body: some View {
         VStack(alignment: .leading) {
             Text("Note " + String(note.num))
@@ -21,6 +21,6 @@ struct NoteDetail: View {
 
 struct NoteDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NoteDetail(note: note_Data[0])
+        NoteDetail(note: noteData[0])
     }
 }

@@ -11,12 +11,13 @@ struct Page: Identifiable {
     var id: Int
     var num: Int
     var book: Book?
+    var notes: [Note]?
 }
 
 var page1 = Page(
        id: 1,
        num: 15,
-    notes: [Notes (
+    notes: [Note (
         id: 3,
      num: 17,
      text: "BEST. PAGE. EVER"
@@ -26,7 +27,7 @@ var page1 = Page(
 var page2 = Page(
        id: 1,
        num: 15,
-       notes: [Notes(
+       notes: [Note(
         id: 1,
         num: 13,
         text: "I love this page"
@@ -35,7 +36,7 @@ var page2 = Page(
 var page3 = Page(
        id: 1,
        num: 15,
-    notes: [Notes(
+    notes: [Note(
         id: 1,
         num: 13,
         text: "I love this page too"

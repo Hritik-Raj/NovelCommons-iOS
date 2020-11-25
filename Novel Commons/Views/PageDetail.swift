@@ -22,19 +22,20 @@ struct PageDetail: View {
 //            }
 //            .navigationBarTitle(Text("Notes"))
 //        }
-        
-        VStack() {
-            if (page.notes!.count > 0) {
-                List(page.notes!) { note in
-                    NavigationLink(destination: NoteDetail(note: note)) {
-                        Text("Note " + String(note.num))
+        if (page.notes!.count > 0) {
+            VStack() {
+                NavigationView {
+                    List(page.notes!) { note in
+                        NavigationLink(destination: NoteDetail(note: note)) {
+                            Text("Note " + String(note.num))
+                        }
                     }
-                    .navigationBarTitle(Text("Notes"))
                 }
+                .navigationBarTitle(Text("Notes"))
             }
-            else {
-                Text("No notes yet.")
-            }
+        }
+        else {
+            Text("No notes yet.")
         }
     }
 }

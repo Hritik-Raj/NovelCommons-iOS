@@ -15,18 +15,18 @@ class ViewRouter: ObservableObject {
             objectWillChange.send(self)
         }
     }
-    var currentBook: Book = book_Data[0] {
+    var currentBook: Book = bookData[0] {
         didSet {
             objectWillChange.send(self)
         }
     }
     
-    var currentPage: Page = page_Data[0] {
+    var currentPage: Page = pageData[0] {
         didSet {
             objectWillChange.send(self)
         }
     }
-    var currentNote: Notes = note_Data[0] {
+    var currentNote: Note = noteData[0] {
         didSet {
             objectWillChange.send(self)
         }

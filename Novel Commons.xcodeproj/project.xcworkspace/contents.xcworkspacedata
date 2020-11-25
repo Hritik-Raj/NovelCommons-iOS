@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:/Users/pdng/Novel Commons/Novel Commons/Models"
+      name = "Models">
+      <FileRef
+         location = "group:Note.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Book.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Page.swift">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:/Users/pdng/Novel Commons/Novel Commons/Views"
+      name = "Views">
+      <FileRef
+         location = "group:PageDetail.swift">
+      </FileRef>
+      <FileRef
+         location = "group:SearchBarView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:LibraryView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:NoteDetail.swift">
+      </FileRef>
+      <FileRef
+         location = "group:BookDetail.swift">
+      </FileRef>
+   </Group>
    <FileRef
       location = "self:">
    </FileRef>
