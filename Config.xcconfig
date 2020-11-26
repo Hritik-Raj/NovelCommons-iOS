@@ -1,0 +1,17 @@
+//
+//  Config.xcconfig
+//  
+//
+//  Created by Pudding on 11/26/20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+//:configuration = Debug
+IPHONEOS_DEPLOYMENT_TARGET = 14.2
+
+//:configuration = Release
+IPHONEOS_DEPLOYMENT_TARGET = 14.2
+
+//:completeSettings = some
+IPHONEOS_DEPLOYMENT_TARGET = 14.2

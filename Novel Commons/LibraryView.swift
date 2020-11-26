@@ -11,7 +11,21 @@ struct LibraryView: View {
         NavigationView {
             List(bookData) { book in
                 NavigationLink(destination: BookDetail(book: book)) {
-                    Text(book.title)
+                    VStack(alignment: .leading) {
+                        Image(book.cover!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(
+                                width: 150,
+                                alignment: .leading
+                            )
+                            //.scaleEffect(0.5)
+                            //.padding(0)
+                        Text(book.title)
+                            .font(.headline)
+                        Text("Pages annotated: " + String(book.pages!.count))
+                            .font(.footnote)
+                    }
                 }
             }
             .navigationBarTitle(Text("Books"))
@@ -23,6 +37,6 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+            .previewDevice(PreviewDevice(rawValue: "iPhone Xs"))
     }
 }

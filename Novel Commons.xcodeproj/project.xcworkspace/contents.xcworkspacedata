@@ -5,6 +5,9 @@
       location = "group:/Users/pdng/Novel Commons/Novel Commons/Models"
       name = "Models">
       <FileRef
+         location = "group:../../Config.xcconfig">
+      </FileRef>
+      <FileRef
          location = "group:Note.swift">
       </FileRef>
       <FileRef
@@ -12,6 +15,9 @@
       </FileRef>
       <FileRef
          location = "group:Page.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/pdng/Novel Commons/Novel Commons/Config.swift">
       </FileRef>
    </Group>
    <Group

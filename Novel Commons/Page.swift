@@ -15,32 +15,30 @@ struct Page: Identifiable {
 }
 
 var page1 = Page(
-       id: 1,
-       num: 15,
+    id: 1,
+    num: 15,
     notes: [Note (
         id: 3,
-     num: 17,
-     text: "BEST. PAGE. EVER"
+        num: 17,
+        text: "BEST. PAGE. EVER"
     )]
-   )
-
+)
 var page2 = Page(
-       id: 1,
-       num: 15,
-       notes: [Note(
+    id: 1,
+    num: 15,
+    notes: [Note(
         id: 1,
         num: 13,
         text: "I love this page"
     )]
-   )
+)
 var page3 = Page(
-       id: 1,
-       num: 15,
+    id: 1,
+    num: 15,
     notes: [Note(
         id: 1,
         num: 13,
         text: "I love this page too"
     )]
-   )
-
+)
 var pageData = [page1, page2, page3]
