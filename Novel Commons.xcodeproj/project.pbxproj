@@ -60,6 +60,7 @@
 		582E6C8F257039B800426776 /* comprehension.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comprehension.jpg; sourceTree = "<group>"; };
 		582E6C90257039B800426776 /* working-in-public.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "working-in-public.jpg"; sourceTree = "<group>"; };
 		582E6C91257039B800426776 /* surfing-uncertainty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "surfing-uncertainty.jpg"; sourceTree = "<group>"; };
+		582E6CA72570454D00426776 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "/Users/pdng/Novel Commons/Novel Commons/LaunchScreen.storyboard"; sourceTree = "<absolute>"; };
 		58E6FC8E255218B200E27903 /* Novel Commons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novel Commons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FC91255218B200E27903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E6FC93255218B200E27903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		58E6FC90255218B200E27903 /* Novel Commons */ = {
 			isa = PBXGroup;
 			children = (
+				582E6CA72570454D00426776 /* LaunchScreen.storyboard */,
 				582E6C5A256F7E2300426776 /* Page.swift */,
 				582E6C57256F7E2300426776 /* BookDetail.swift */,
 				582E6C56256F7E2300426776 /* NoteDetail.swift */,
