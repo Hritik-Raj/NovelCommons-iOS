@@ -8,30 +8,12 @@ import SwiftUI
 
 struct PageDetail: View {
     var page: Page
-
     var body: some View {
-//        VStack(alignment: .leading) {
-//            Text("Page " + String(page.num))
-//                .font(.title)
-//        }
-//        NavigationView {
-//            List(note_Data) { note in
-//                NavigationLink(destination: NoteDetail(book: book)) {
-//                    Text(note.title)
-//                }
-//            }
-//            .navigationBarTitle(Text("Notes"))
-//        }
         if (page.notes!.count > 0) {
-            VStack() {
-                NavigationView {
-                    List(page.notes!) { note in
-                        NavigationLink(destination: NoteDetail(note: note)) {
-                            Text("Note " + String(note.num))
-                        }
-                    }
+            List(page.notes!) { note in
+                NavigationLink(destination: NoteDetail(note: note)) {
+                    Text("Note " + String(note.num))
                 }
-                .navigationBarTitle(Text("Notes"))
             }
         }
         else {

@@ -28,7 +28,7 @@ struct LibraryView: View {
                     }
                 }
             }
-            .navigationBarTitle(Text("Books"))
+            .navigationBarTitle(Text("Library"))
             // need button to create book
         }
     }

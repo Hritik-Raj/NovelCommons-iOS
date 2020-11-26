@@ -9,27 +9,27 @@ import SwiftUI
 struct BookDetail: View {
     var book: Book
     var body: some View {
-        // Needs buttons to edit/delete
-        VStack(alignment: .leading) {
-            Text(book.title)
-                .font(.title)
-            Text(book.author)
-                .font(.subheadline)
-        }
-        // Each page should be a card at some point
-        // But a list will suffice for now
-        VStack() {
+        // Needs buttons to edit/delete
+        NavigationView {
             if (book.pages!.count > 0) {
                 List(book.pages!) { page in
                     NavigationLink(destination: PageDetail(page: page)) {
-                        Text("Page " + String(page.num))
+                        VStack (alignment: .leading) {
+                            Text("Page " + String(page.num))
+                                .font(.headline)
+                            Text(String(page.notes!.count) + " notes on this page.")
+                                .font(.subheadline)
+                        }
                     }
                 }
             }
             else {
-                Text("No notes yet.")
+                Text("No pages have been annotated for " + book.title + ", yet.")
             }
         }
+        .navigationBarTitle(Text(book.title))
+        // Each page should be a card at some point
+        // But a list will suffice for now
         // Needs buttons to "Load AR", export(?), and delete
     }
 }
