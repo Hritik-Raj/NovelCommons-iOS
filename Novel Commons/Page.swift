@@ -7,13 +7,19 @@
 import SwiftUI
 import CoreLocation
 
-struct Page: Identifiable {
-    var id: Int
+class Page: Identifiable, ObservableObject {
+    let id = UUID()
     var num: Int
     var book: Book?
     var notes: [Note]?
+    
+    init(num: Int, notes: [Note]?) {
+        self.num = num
+        self.notes = notes
+    }
 }
 
+/*
 var page1 = Page(
     id: 1,
     num: 15,
@@ -42,3 +48,4 @@ var page3 = Page(
     )]
 )
 var pageData = [page1, page2, page3]
+*/

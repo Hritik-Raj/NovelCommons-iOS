@@ -24,6 +24,6 @@ struct PageDetail: View {
 
 struct PageDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PageDetail(page: Page(id: 0, num: 0))
+        PageDetail(page: Page(num: 0, notes: []))
     }
 }
