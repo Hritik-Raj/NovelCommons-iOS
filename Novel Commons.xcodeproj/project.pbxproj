@@ -20,6 +20,11 @@
 		582E6C92257039B900426776 /* comprehension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C8F257039B800426776 /* comprehension.jpg */; };
 		582E6C93257039B900426776 /* working-in-public.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C90257039B800426776 /* working-in-public.jpg */; };
 		582E6C94257039B900426776 /* surfing-uncertainty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C91257039B800426776 /* surfing-uncertainty.jpg */; };
+		582E6CB725775DFD00426776 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CB625775DFD00426776 /* CameraController.swift */; };
+		582E6CBC2577658400426776 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CBB2577658400426776 /* CameraView.swift */; };
+		582E6CC12578565D00426776 /* PageScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CC02578565D00426776 /* PageScanViewController.swift */; };
+		582E6CC62578583600426776 /* RecognizedTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CC52578583600426776 /* RecognizedTextDataSource.swift */; };
+		582E6CCB2578A76000426776 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CCA2578A76000426776 /* CameraViewController.swift */; };
 		58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC91255218B200E27903 /* AppDelegate.swift */; };
 		58E6FC94255218B200E27903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC93255218B200E27903 /* ContentView.swift */; };
 		58E6FC96255218B200E27903 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC95255218B200E27903 /* Experience.rcproject */; };
@@ -50,7 +55,7 @@
 		582E6C07256DE12500426776 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		582E6C4B256F7E2300426776 /* PageDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageDetail.swift; sourceTree = "<group>"; };
 		582E6C4F256F7E2300426776 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
-		582E6C53256F7E2300426776 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		582E6C53256F7E2300426776 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryView.swift; path = "Novel Commons/LibraryView.swift"; sourceTree = SOURCE_ROOT; };
 		582E6C54256F7E2300426776 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		582E6C55256F7E2300426776 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		582E6C56256F7E2300426776 /* NoteDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetail.swift; sourceTree = "<group>"; };
@@ -61,6 +66,11 @@
 		582E6C90257039B800426776 /* working-in-public.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "working-in-public.jpg"; sourceTree = "<group>"; };
 		582E6C91257039B800426776 /* surfing-uncertainty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "surfing-uncertainty.jpg"; sourceTree = "<group>"; };
 		582E6CA72570454D00426776 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "/Users/pdng/Novel Commons/Novel Commons/LaunchScreen.storyboard"; sourceTree = "<absolute>"; };
+		582E6CB625775DFD00426776 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraController.swift; path = "/Users/pdng/Novel Commons/Novel Commons/CameraController.swift"; sourceTree = "<absolute>"; };
+		582E6CBB2577658400426776 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/CameraView.swift"; sourceTree = "<absolute>"; };
+		582E6CC02578565D00426776 /* PageScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageScanViewController.swift; path = "/Users/pdng/Novel Commons/Novel Commons/PageScanViewController.swift"; sourceTree = "<absolute>"; };
+		582E6CC52578583600426776 /* RecognizedTextDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecognizedTextDataSource.swift; path = "/Users/pdng/Novel Commons/Novel Commons/RecognizedTextDataSource.swift"; sourceTree = "<absolute>"; };
+		582E6CCA2578A76000426776 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = "/Users/pdng/Novel Commons/Novel Commons/CameraViewController.swift"; sourceTree = "<absolute>"; };
 		58E6FC8E255218B200E27903 /* Novel Commons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novel Commons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FC91255218B200E27903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E6FC93255218B200E27903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +145,11 @@
 		58E6FC90255218B200E27903 /* Novel Commons */ = {
 			isa = PBXGroup;
 			children = (
+				582E6CCA2578A76000426776 /* CameraViewController.swift */,
+				582E6CC52578583600426776 /* RecognizedTextDataSource.swift */,
+				582E6CC02578565D00426776 /* PageScanViewController.swift */,
+				582E6CBB2577658400426776 /* CameraView.swift */,
+				582E6CB625775DFD00426776 /* CameraController.swift */,
 				582E6CA72570454D00426776 /* LaunchScreen.storyboard */,
 				582E6C5A256F7E2300426776 /* Page.swift */,
 				582E6C57256F7E2300426776 /* BookDetail.swift */,
@@ -316,6 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				582E6C08256DE12600426776 /* ViewController.swift in Sources */,
+				582E6CC12578565D00426776 /* PageScanViewController.swift in Sources */,
+				582E6CBC2577658400426776 /* CameraView.swift in Sources */,
+				582E6CCB2578A76000426776 /* CameraViewController.swift in Sources */,
+				582E6CC62578583600426776 /* RecognizedTextDataSource.swift in Sources */,
 				58E6FC94255218B200E27903 /* ContentView.swift in Sources */,
 				582E6C63256F7E2300426776 /* LibraryView.swift in Sources */,
 				582E6C60256F7E2300426776 /* SearchBarView.swift in Sources */,
@@ -326,6 +345,7 @@
 				582E6C66256F7E2300426776 /* NoteDetail.swift in Sources */,
 				58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */,
 				58E6FC96255218B200E27903 /* Experience.rcproject in Sources */,
+				582E6CB725775DFD00426776 /* CameraController.swift in Sources */,
 				582E6C67256F7E2300426776 /* BookDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

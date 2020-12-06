@@ -10,9 +10,12 @@ struct BookDetail: View {
     @StateObject var book: Book
     var body: some View {
         // Needs buttons to edit/delete
-        //NavigationView {
-        Text(book.title)
-            .font(.title)
+        VStack {
+            Text(book.title)
+                .font(.title)
+            //NavigationLink(destination: CameraView()) { Text("New page") }
+            Button("New page", action: book.newPage)
+        }
         if (book.pages!.count > 0) {
             ScrollView(.horizontal) {
                 HStack {
@@ -40,12 +43,6 @@ struct BookDetail: View {
         else {
             Text("No pages have been annotated for " + book.title + ", yet.")
         }
-        Button("New page", action: book.newPage)
-        //}
-        //.navigationBarTitle(Text(book.title))
-        // Each page should be a card at some point
-        // But a list will suffice for now
-        // Needs buttons to "Load AR", export(?), and delete
     }
 }
 

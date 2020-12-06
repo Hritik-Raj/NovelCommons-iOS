@@ -5,6 +5,21 @@
       location = "group:/Users/pdng/Novel Commons/Novel Commons/Models"
       name = "Models">
       <FileRef
+         location = "group:/Users/pdng/Novel Commons/Novel Commons/CameraViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/pdng/Novel Commons/Novel Commons/RecognizedTextDataSource.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/pdng/Novel Commons/Novel Commons/PageScanViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/pdng/Novel Commons/Novel Commons/CameraView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/pdng/Novel Commons/Novel Commons/CameraController.swift">
+      </FileRef>
+      <FileRef
          location = "group:/Users/pdng/Novel Commons/Novel Commons/LaunchScreen.storyboard">
       </FileRef>
       <FileRef
