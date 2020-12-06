@@ -11,8 +11,11 @@ struct BookDetail: View {
     var body: some View {
         // Needs buttons to edit/delete
         //NavigationView {
-        Text(book.title)
-            .font(.title)
+        VStack {
+            Text(book.title)
+                .font(.title)
+            NavigationLink(destination: ScanView()) { Text("New page") }
+        }
         if (book.pages!.count > 0) {
             ScrollView(.horizontal) {
                 HStack {

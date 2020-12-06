@@ -20,6 +20,8 @@
 		582E6C92257039B900426776 /* comprehension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C8F257039B800426776 /* comprehension.jpg */; };
 		582E6C93257039B900426776 /* working-in-public.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C90257039B800426776 /* working-in-public.jpg */; };
 		582E6C94257039B900426776 /* surfing-uncertainty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C91257039B800426776 /* surfing-uncertainty.jpg */; };
+		582E6CE5257C88CE00426776 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CE4257C88CE00426776 /* ScanViewController.swift */; };
+		582E6CEB257CC11000426776 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CEA257CC11000426776 /* ScanView.swift */; };
 		58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC91255218B200E27903 /* AppDelegate.swift */; };
 		58E6FC94255218B200E27903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC93255218B200E27903 /* ContentView.swift */; };
 		58E6FC96255218B200E27903 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC95255218B200E27903 /* Experience.rcproject */; };
@@ -61,6 +63,8 @@
 		582E6C90257039B800426776 /* working-in-public.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "working-in-public.jpg"; sourceTree = "<group>"; };
 		582E6C91257039B800426776 /* surfing-uncertainty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "surfing-uncertainty.jpg"; sourceTree = "<group>"; };
 		582E6CA72570454D00426776 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "/Users/pdng/Novel Commons/Novel Commons/LaunchScreen.storyboard"; sourceTree = "<absolute>"; };
+		582E6CE4257C88CE00426776 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = "/Users/pdng/Novel Commons/Novel Commons/ScanViewController.swift"; sourceTree = "<absolute>"; };
+		582E6CEA257CC11000426776 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScanView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/ScanView.swift"; sourceTree = "<absolute>"; };
 		58E6FC8E255218B200E27903 /* Novel Commons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novel Commons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FC91255218B200E27903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E6FC93255218B200E27903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,8 +139,10 @@
 		58E6FC90255218B200E27903 /* Novel Commons */ = {
 			isa = PBXGroup;
 			children = (
+				582E6CEA257CC11000426776 /* ScanView.swift */,
 				582E6CA72570454D00426776 /* LaunchScreen.storyboard */,
 				582E6C5A256F7E2300426776 /* Page.swift */,
+				582E6CE4257C88CE00426776 /* ScanViewController.swift */,
 				582E6C57256F7E2300426776 /* BookDetail.swift */,
 				582E6C56256F7E2300426776 /* NoteDetail.swift */,
 				582E6C55256F7E2300426776 /* Book.swift */,
@@ -319,8 +325,10 @@
 				58E6FC94255218B200E27903 /* ContentView.swift in Sources */,
 				582E6C63256F7E2300426776 /* LibraryView.swift in Sources */,
 				582E6C60256F7E2300426776 /* SearchBarView.swift in Sources */,
+				582E6CE5257C88CE00426776 /* ScanViewController.swift in Sources */,
 				582E6C65256F7E2300426776 /* Book.swift in Sources */,
 				582E6C64256F7E2300426776 /* Note.swift in Sources */,
+				582E6CEB257CC11000426776 /* ScanView.swift in Sources */,
 				582E6C6A256F7E2300426776 /* Page.swift in Sources */,
 				582E6C5D256F7E2300426776 /* PageDetail.swift in Sources */,
 				582E6C66256F7E2300426776 /* NoteDetail.swift in Sources */,
