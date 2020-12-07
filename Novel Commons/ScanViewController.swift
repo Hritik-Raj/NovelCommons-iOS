@@ -11,66 +11,81 @@ import Vision
 import VisionKit
 
 final class ScanViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
-    var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
-    let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
+    var scanCam: VNDocumentCameraViewController?
     var previewView: UIView!
     
-    override func viewDidLoad() {
-        //super.viewDidLoad()
-        previewView = UIView(frame: CGRect(x: 0, y:0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
-        view.addSubview(previewView)
-        setupVision()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        print("View did appear")
         scanDocument()
+        super.viewDidAppear(animated)
     }
     
-    @objc
+    //@objc
     func scanDocument() {
-        let scanViewController = VNDocumentCameraViewController()
-        scanViewController.delegate = self
-        present(scanViewController, animated: true)
+        guard VNDocumentCameraViewController.isSupported else { print("Document scanning not supported."); return}
+        
+        scanCam = VNDocumentCameraViewController()
+        scanCam?.delegate = self
+        present(scanCam!, animated: true, completion: nil)
     }
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        scanCam?.dismiss(animated: true, completion: nil)
+        scanCam = nil
+        
         for pageNum in 0 ..< scan.pageCount {
             let image = scan.imageOfPage(at: pageNum)
+            detectText(in: image)
         }
-        
-        controller.dismiss(animated: true)
     }
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
-        controller.dismiss(animated: true)
+        scanCam?.dismiss(animated: true, completion: nil)
     }
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
         print(error)
-        controller.dismiss(animated: true)
     }
     
-    private func setupVision() {
-        textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
-            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
-            var detectedText = ""
-            for observation in observations {
-                guard let topCandidate = observation.topCandidates(1).first else { return }
-                detectedText += topCandidate.string + "\n"
+    func detectText(in image: UIImage) {
+        guard let image = image.cgImage else {
+            print("Invalid image")
+            return
+        }
+        
+        let request = VNRecognizeTextRequest { (request, error) in
+            if let error = error {
+                print(error)
+            } else {
+                self.handleResults(results: request.results)
             }
         }
-        textRecognitionRequest.recognitionLevel = .accurate
         
+        request.recognitionLevel = .accurate
+        performRequest(request: request, image: image)
     }
     
-    private func recognizeTextInImage(_ image: UIImage) {
-        guard let cgImage = image.cgImage else { return }
+    func performRequest(request: VNRecognizeTextRequest, image: CGImage) {
+        let requests = [request]
+        let handler = VNImageRequestHandler(cgImage: image, orientation: .up, options: [:])
         
-        textRecognitionWorkQueue.async {
-            let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        DispatchQueue.global(qos: .userInitiated).async {
             do {
-                try requestHandler.perform([self.textRecognitionRequest])
-            } catch {
+                try handler.perform(requests)
+            } catch let error {
                 print(error)
+            }
+        }
+    }
+    
+    func handleResults(results: [Any]?) {
+        guard let results = results, results.count > 0 else {
+            print("Text not found")
+            return
+        }
+        for result in results {
+            if let observation = result as? VNRecognizedTextObservation {
+                for text in observation.topCandidates(1) {
+                    print(text.string + "\n")
+                }
             }
         }
     }
