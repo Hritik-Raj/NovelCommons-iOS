@@ -4,7 +4,7 @@
 //
 //  Created by Pudding on 12/5/20.
 //
-
+/*
 import SwiftUI
 import UIKit
 import Vision
@@ -12,16 +12,26 @@ import VisionKit
 
 final class ScanViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
     var scanCam: VNDocumentCameraViewController?
-    var previewView: UIView!
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("View did appear")
-        scanDocument()
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        print("View did load.")
+        
+        super.viewDidLoad()
+        //let tap = UITapGestureRecognizer(target: self, action: #selector(scanDocument))
+        //self.view.addGestureRecognizer(tap)
     }
     
-    //@objc
+    override func viewDidAppear(_ animated: Bool) {
+        print("View did appear.")
+        
+        super.viewDidAppear(animated)
+        scanDocument()
+    }
+    
+    @objc
     func scanDocument() {
+        print("Opening document scanner...")
+        
         guard VNDocumentCameraViewController.isSupported else { print("Document scanning not supported."); return}
         
         scanCam = VNDocumentCameraViewController()
@@ -30,6 +40,8 @@ final class ScanViewController: UIViewController, VNDocumentCameraViewController
     }
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        print("Document camera finished with scan(s).")
+        
         scanCam?.dismiss(animated: true, completion: nil)
         scanCam = nil
         
@@ -39,6 +51,8 @@ final class ScanViewController: UIViewController, VNDocumentCameraViewController
         }
     }
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+        print("Document camera canceled.")
+        
         scanCam?.dismiss(animated: true, completion: nil)
     }
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
@@ -46,6 +60,9 @@ final class ScanViewController: UIViewController, VNDocumentCameraViewController
     }
     
     func detectText(in image: UIImage) {
+        print("Detecting text...")
+        sendImage(image)
+        
         guard let image = image.cgImage else {
             print("Invalid image")
             return
@@ -64,6 +81,8 @@ final class ScanViewController: UIViewController, VNDocumentCameraViewController
     }
     
     func performRequest(request: VNRecognizeTextRequest, image: CGImage) {
+        print("Performing text recognition request...")
+        
         let requests = [request]
         let handler = VNImageRequestHandler(cgImage: image, orientation: .up, options: [:])
         
@@ -76,7 +95,15 @@ final class ScanViewController: UIViewController, VNDocumentCameraViewController
         }
     }
     
+    private func sendImage(_ image: UIImage) {
+        print("Sending image...")
+        let img = Image(uiImage: image)
+        AnnotatePageView(image: img)
+    }
+    
     func handleResults(results: [Any]?) {
+        print("Handling results...")
+        
         guard let results = results, results.count > 0 else {
             print("Text not found")
             return
@@ -84,7 +111,7 @@ final class ScanViewController: UIViewController, VNDocumentCameraViewController
         for result in results {
             if let observation = result as? VNRecognizedTextObservation {
                 for text in observation.topCandidates(1) {
-                    print(text.string + "\n")
+                    print(text.string)
                 }
             }
         }
@@ -101,3 +128,4 @@ extension ScanViewController: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: ScanViewController, context: UIViewControllerRepresentableContext<ScanViewController>) {
     }
 }
+*/

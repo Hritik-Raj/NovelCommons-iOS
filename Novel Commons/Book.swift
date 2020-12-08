@@ -22,8 +22,10 @@ class Book: Identifiable, ObservableObject {
         self.cover = cover
     }
     
-    func newPage() {
-        self.pages?.append(Page(num: 2, notes: []))
+    func newPage(text: String) {
+        self.pages?.append(Page(num: 2, notes: [], text: text))
+        //let scanViewController = ScanViewController()
+        //scanViewController.scanDocument()
     }
 }
 
@@ -33,7 +35,8 @@ let book1 = Book(
     pages: [
         Page(num: 1, notes: [
             Note(id: 1, num: 1, text: "Nice.")
-        ])
+            ],
+        text: "")
     ],
     cover: "working-in-public"
 )

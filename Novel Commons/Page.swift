@@ -12,10 +12,12 @@ class Page: Identifiable, ObservableObject {
     var num: Int
     var book: Book?
     var notes: [Note]?
+    var text: String
     
-    init(num: Int, notes: [Note]?) {
+    init(num: Int, notes: [Note]?, text: String) {
         self.num = num
         self.notes = notes
+        self.text = text
     }
 }
 

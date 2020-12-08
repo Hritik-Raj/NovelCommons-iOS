@@ -8,13 +8,23 @@ import SwiftUI
 
 struct BookDetail: View {
     @StateObject var book: Book
+    @State var showScanView = false
+    @State var recognizedText = ""
+    
+    func createPage() {
+        showScanView = true
+        print("beep boop \n" + recognizedText)
+        //book.newPage()
+    }
+    
     var body: some View {
         // Needs buttons to edit/delete
         //NavigationView {
         VStack {
             Text(book.title)
                 .font(.title)
-            NavigationLink(destination: ScanView()) { Text("New page") }
+            //NavigationLink(destination: ScanView()) { Text("New page") }
+            Button("New page", action: { createPage() })
         }
         if (book.pages!.count > 0) {
             ScrollView(.horizontal) {
@@ -31,19 +41,26 @@ struct BookDetail: View {
                                         .font(.headline)
                                     Text(String(page.notes!.count) + " notes on this page.")
                                         .font(.subheadline)
+                                    Text(page.text)
                                 }
+                                .frame(width: 300, height: 400)
+                                .foregroundColor(Color.black)
                             }
                             .frame(width: 375, height: 450)
                             .padding(EdgeInsets(top: 50, leading: 0, bottom: 50, trailing: 0))
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
+            }
+            .sheet(isPresented: $showScanView) {
+                ScanView(recognizedText: self.$recognizedText, book: book)
             }
         }
         else {
             Text("No pages have been annotated for " + book.title + ", yet.")
         }
-        Button("New page", action: book.newPage)
+        //Button("New page", action: book.newPage)
         //}
         //.navigationBarTitle(Text(book.title))
         // Each page should be a card at some point
