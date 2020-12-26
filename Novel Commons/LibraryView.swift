@@ -29,8 +29,8 @@ struct LibraryView: View {
                 }
             }
             .navigationBarTitle(Text("Library"))
-            // need button to create book
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }
+        //.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

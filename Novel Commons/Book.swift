@@ -12,12 +12,14 @@ class Book: Identifiable, ObservableObject {
     let id = UUID()
     @Published var title: String
     @Published var author: String
+    var notes: [Note] = []
     @Published var pages: [Page]?
     var cover: String? = "default-cover"
     
-    init(title: String, author: String, pages: [Page]?, cover: String) {
+    init(title: String, author: String, notes: [Note], pages: [Page]?, cover: String) {
         self.title = title
         self.author = author
+        self.notes = notes
         self.pages = pages
         self.cover = cover
     }
@@ -32,15 +34,28 @@ class Book: Identifiable, ObservableObject {
 let book1 = Book(
     title: "Working in Public",
     author: "Nadia Eghbal",
+    notes: [
+        Note(text: "Cool thought", page: 3)
+    ],
     pages: [
         Page(num: 1, notes: [
-            Note(id: 1, num: 1, text: "Nice.")
+            Note(text: "Nice.")
             ],
         text: "")
     ],
     cover: "working-in-public"
 )
-var bookData = [book1]
+let book2 = Book(
+    title: "Comprehension",
+    author: "Walter Kintsch",
+    notes: [
+        Note(text: "very cool thought", page: 5),
+        Note(text: "hmmmmmm", page: 7)
+    ],
+    pages: [],
+    cover: "comprehension"
+)
+var bookData = [book1, book2]
 /*
 var book1 = Book()
     title: "Working in Public",

@@ -10,7 +10,7 @@ struct NoteDetail: View {
     var note: Note
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Note " + String(note.num))
+            Text("Note ")
                 .font(.title)
             Text(note.text)
                 .font(.subheadline)

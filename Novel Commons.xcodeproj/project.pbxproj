@@ -23,6 +23,7 @@
 		582E6CE5257C88CE00426776 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CE4257C88CE00426776 /* ScanViewController.swift */; };
 		582E6CEB257CC11000426776 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CEA257CC11000426776 /* ScanView.swift */; };
 		582E6CF4257DF88900426776 /* AnnotatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CF3257DF88900426776 /* AnnotatePageView.swift */; };
+		582E6D21259438A700426776 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6D20259438A700426776 /* NotesView.swift */; };
 		58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC91255218B200E27903 /* AppDelegate.swift */; };
 		58E6FC94255218B200E27903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC93255218B200E27903 /* ContentView.swift */; };
 		58E6FC96255218B200E27903 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC95255218B200E27903 /* Experience.rcproject */; };
@@ -67,6 +68,7 @@
 		582E6CE4257C88CE00426776 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = "/Users/pdng/Novel Commons/Novel Commons/ScanViewController.swift"; sourceTree = "<absolute>"; };
 		582E6CEA257CC11000426776 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScanView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/ScanView.swift"; sourceTree = "<absolute>"; };
 		582E6CF3257DF88900426776 /* AnnotatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnotatePageView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/AnnotatePageView.swift"; sourceTree = "<absolute>"; };
+		582E6D20259438A700426776 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/NotesView.swift"; sourceTree = "<absolute>"; };
 		58E6FC8E255218B200E27903 /* Novel Commons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novel Commons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FC91255218B200E27903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E6FC93255218B200E27903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		58E6FC90255218B200E27903 /* Novel Commons */ = {
 			isa = PBXGroup;
 			children = (
+				582E6D20259438A700426776 /* NotesView.swift */,
 				582E6CF3257DF88900426776 /* AnnotatePageView.swift */,
 				582E6CEA257CC11000426776 /* ScanView.swift */,
 				582E6CA72570454D00426776 /* LaunchScreen.storyboard */,
@@ -338,6 +341,7 @@
 				58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */,
 				582E6CF4257DF88900426776 /* AnnotatePageView.swift in Sources */,
 				58E6FC96255218B200E27903 /* Experience.rcproject in Sources */,
+				582E6D21259438A700426776 /* NotesView.swift in Sources */,
 				582E6C67256F7E2300426776 /* BookDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Novel-Commons.Novel-Commons";
+				PRODUCT_BUNDLE_IDENTIFIER = "Novel-Commons.Novel-Commons1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,7 +530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Novel-Commons.Novel-Commons";
+				PRODUCT_BUNDLE_IDENTIFIER = "Novel-Commons.Novel-Commons1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

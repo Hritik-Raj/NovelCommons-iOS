@@ -12,7 +12,7 @@ struct PageDetail: View {
         if (page.notes!.count > 0) {
             List(page.notes!) { note in
                 NavigationLink(destination: NoteDetail(note: note)) {
-                    Text("Note " + String(note.num))
+                    Text("Note ")
                 }
             }
         }

@@ -10,10 +10,25 @@ import RealityKit
 
 struct ContentView : View {
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        TabView {
+            LibraryView()
+                .tabItem {
+                    Text("Library")
+                }
+            NotesView(bookData: bookData)
+                .tabItem {
+                    Text("Notes")
+                }
+            Text("Profile")
+                .tabItem {
+                    Text("Profile")
+                }
+        }
+        //return ARViewContainer().edgesIgnoringSafeArea(.all)
     }
 }
 
+/*
 struct ARViewContainer: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
@@ -41,3 +56,4 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+*/
