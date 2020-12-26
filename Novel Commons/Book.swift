@@ -12,7 +12,7 @@ class Book: Identifiable, ObservableObject {
     let id = UUID()
     @Published var title: String
     @Published var author: String
-    var notes: [Note] = []
+    @Published var notes: [Note] = []
     @Published var pages: [Page]?
     var cover: String? = "default-cover"
     
@@ -28,6 +28,9 @@ class Book: Identifiable, ObservableObject {
         self.pages?.append(Page(num: 2, notes: [], text: text))
         //let scanViewController = ScanViewController()
         //scanViewController.scanDocument()
+    }
+    func newNote(book: Book, title: String, page: String, content: String) {
+        book.notes.append(Note(text: content, page: Int(page)))
     }
 }
 

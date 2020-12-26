@@ -20,10 +20,6 @@
 		582E6C92257039B900426776 /* comprehension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C8F257039B800426776 /* comprehension.jpg */; };
 		582E6C93257039B900426776 /* working-in-public.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C90257039B800426776 /* working-in-public.jpg */; };
 		582E6C94257039B900426776 /* surfing-uncertainty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 582E6C91257039B800426776 /* surfing-uncertainty.jpg */; };
-		582E6CE5257C88CE00426776 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CE4257C88CE00426776 /* ScanViewController.swift */; };
-		582E6CEB257CC11000426776 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CEA257CC11000426776 /* ScanView.swift */; };
-		582E6CF4257DF88900426776 /* AnnotatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6CF3257DF88900426776 /* AnnotatePageView.swift */; };
-		582E6D21259438A700426776 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582E6D20259438A700426776 /* NotesView.swift */; };
 		58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC91255218B200E27903 /* AppDelegate.swift */; };
 		58E6FC94255218B200E27903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC93255218B200E27903 /* ContentView.swift */; };
 		58E6FC96255218B200E27903 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FC95255218B200E27903 /* Experience.rcproject */; };
@@ -31,6 +27,13 @@
 		58E6FC9B255218CC00E27903 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E6FC9A255218CC00E27903 /* Preview Assets.xcassets */; };
 		58E6FCA6255218CD00E27903 /* Novel_CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FCA5255218CD00E27903 /* Novel_CommonsTests.swift */; };
 		58E6FCB1255218CD00E27903 /* Novel_CommonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E6FCB0255218CD00E27903 /* Novel_CommonsUITests.swift */; };
+		BC3EDA14259716DA00F96BA9 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EDA0F259716DA00F96BA9 /* ScanViewController.swift */; };
+		BC3EDA15259716DA00F96BA9 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EDA10259716DA00F96BA9 /* NotesView.swift */; };
+		BC3EDA16259716DA00F96BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3EDA11259716DA00F96BA9 /* LaunchScreen.storyboard */; };
+		BC3EDA17259716DA00F96BA9 /* AnnotatePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EDA12259716DA00F96BA9 /* AnnotatePageView.swift */; };
+		BC3EDA18259716DA00F96BA9 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EDA13259716DA00F96BA9 /* ScanView.swift */; };
+		BC3EDA202597303700F96BA9 /* BookNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EDA1F2597303700F96BA9 /* BookNotesView.swift */; };
+		BC3EDA252597328F00F96BA9 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3EDA242597328F00F96BA9 /* NewNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +67,6 @@
 		582E6C8F257039B800426776 /* comprehension.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comprehension.jpg; sourceTree = "<group>"; };
 		582E6C90257039B800426776 /* working-in-public.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "working-in-public.jpg"; sourceTree = "<group>"; };
 		582E6C91257039B800426776 /* surfing-uncertainty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "surfing-uncertainty.jpg"; sourceTree = "<group>"; };
-		582E6CA72570454D00426776 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "/Users/pdng/Novel Commons/Novel Commons/LaunchScreen.storyboard"; sourceTree = "<absolute>"; };
-		582E6CE4257C88CE00426776 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScanViewController.swift; path = "/Users/pdng/Novel Commons/Novel Commons/ScanViewController.swift"; sourceTree = "<absolute>"; };
-		582E6CEA257CC11000426776 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScanView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/ScanView.swift"; sourceTree = "<absolute>"; };
-		582E6CF3257DF88900426776 /* AnnotatePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnotatePageView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/AnnotatePageView.swift"; sourceTree = "<absolute>"; };
-		582E6D20259438A700426776 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesView.swift; path = "/Users/pdng/Novel Commons/Novel Commons/NotesView.swift"; sourceTree = "<absolute>"; };
 		58E6FC8E255218B200E27903 /* Novel Commons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Novel Commons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FC91255218B200E27903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E6FC93255218B200E27903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +80,13 @@
 		58E6FCAC255218CD00E27903 /* Novel CommonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Novel CommonsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6FCB0255218CD00E27903 /* Novel_CommonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel_CommonsUITests.swift; sourceTree = "<group>"; };
 		58E6FCB2255218CD00E27903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC3EDA0F259716DA00F96BA9 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		BC3EDA10259716DA00F96BA9 /* NotesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		BC3EDA11259716DA00F96BA9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC3EDA12259716DA00F96BA9 /* AnnotatePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatePageView.swift; sourceTree = "<group>"; };
+		BC3EDA13259716DA00F96BA9 /* ScanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		BC3EDA1F2597303700F96BA9 /* BookNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNotesView.swift; sourceTree = "<group>"; };
+		BC3EDA242597328F00F96BA9 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +148,14 @@
 		58E6FC90255218B200E27903 /* Novel Commons */ = {
 			isa = PBXGroup;
 			children = (
-				582E6D20259438A700426776 /* NotesView.swift */,
-				582E6CF3257DF88900426776 /* AnnotatePageView.swift */,
-				582E6CEA257CC11000426776 /* ScanView.swift */,
-				582E6CA72570454D00426776 /* LaunchScreen.storyboard */,
+				BC3EDA12259716DA00F96BA9 /* AnnotatePageView.swift */,
+				BC3EDA11259716DA00F96BA9 /* LaunchScreen.storyboard */,
 				582E6C5A256F7E2300426776 /* Page.swift */,
-				582E6CE4257C88CE00426776 /* ScanViewController.swift */,
+				BC3EDA10259716DA00F96BA9 /* NotesView.swift */,
+				BC3EDA1F2597303700F96BA9 /* BookNotesView.swift */,
+				BC3EDA242597328F00F96BA9 /* NewNoteView.swift */,
+				BC3EDA13259716DA00F96BA9 /* ScanView.swift */,
+				BC3EDA0F259716DA00F96BA9 /* ScanViewController.swift */,
 				582E6C57256F7E2300426776 /* BookDetail.swift */,
 				582E6C56256F7E2300426776 /* NoteDetail.swift */,
 				582E6C55256F7E2300426776 /* Book.swift */,
@@ -301,6 +308,7 @@
 				582E6C93257039B900426776 /* working-in-public.jpg in Resources */,
 				582E6C92257039B900426776 /* comprehension.jpg in Resources */,
 				582E6C7C256F827B00426776 /* Config.xcconfig in Resources */,
+				BC3EDA16259716DA00F96BA9 /* LaunchScreen.storyboard in Resources */,
 				582E6C94257039B900426776 /* surfing-uncertainty.jpg in Resources */,
 				58E6FC98255218CC00E27903 /* Assets.xcassets in Resources */,
 			);
@@ -331,17 +339,19 @@
 				58E6FC94255218B200E27903 /* ContentView.swift in Sources */,
 				582E6C63256F7E2300426776 /* LibraryView.swift in Sources */,
 				582E6C60256F7E2300426776 /* SearchBarView.swift in Sources */,
-				582E6CE5257C88CE00426776 /* ScanViewController.swift in Sources */,
 				582E6C65256F7E2300426776 /* Book.swift in Sources */,
 				582E6C64256F7E2300426776 /* Note.swift in Sources */,
-				582E6CEB257CC11000426776 /* ScanView.swift in Sources */,
+				BC3EDA14259716DA00F96BA9 /* ScanViewController.swift in Sources */,
+				BC3EDA252597328F00F96BA9 /* NewNoteView.swift in Sources */,
+				BC3EDA15259716DA00F96BA9 /* NotesView.swift in Sources */,
+				BC3EDA17259716DA00F96BA9 /* AnnotatePageView.swift in Sources */,
 				582E6C6A256F7E2300426776 /* Page.swift in Sources */,
+				BC3EDA202597303700F96BA9 /* BookNotesView.swift in Sources */,
 				582E6C5D256F7E2300426776 /* PageDetail.swift in Sources */,
 				582E6C66256F7E2300426776 /* NoteDetail.swift in Sources */,
 				58E6FC92255218B200E27903 /* AppDelegate.swift in Sources */,
-				582E6CF4257DF88900426776 /* AnnotatePageView.swift in Sources */,
 				58E6FC96255218B200E27903 /* Experience.rcproject in Sources */,
-				582E6D21259438A700426776 /* NotesView.swift in Sources */,
+				BC3EDA18259716DA00F96BA9 /* ScanView.swift in Sources */,
 				582E6C67256F7E2300426776 /* BookDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

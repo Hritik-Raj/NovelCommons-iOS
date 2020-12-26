@@ -10,7 +10,7 @@ struct LibraryView: View {
     var body: some View {
         NavigationView {
             List(bookData) { book in
-                NavigationLink(destination: BookDetail(book: book)) {
+                NavigationLink(destination: BookNotesView(book: book)) {
                     VStack(alignment: .leading) {
                         Image(book.cover!)
                             .resizable()
@@ -28,7 +28,7 @@ struct LibraryView: View {
                     }
                 }
             }
-            .navigationBarTitle(Text("Library"))
+            .navigationTitle(Text("Library"))
         }
         //.navigationViewStyle(StackNavigationViewStyle())
     }
