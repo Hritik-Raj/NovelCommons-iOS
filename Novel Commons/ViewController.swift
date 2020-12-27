@@ -4,7 +4,7 @@
 //
 //  Created by Hritik Raj on 11/20/20.
 //
-/*
+
 import SwiftUI
 import Combine
 
@@ -21,12 +21,13 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var currentPage: Page = pageData[0] {
+    var currentNote: Note = noteData[0] {
         didSet {
             objectWillChange.send(self)
         }
     }
-    var currentNote: Note = noteData[0] {
+    
+    var currentPage: Image = Image("placeholder") {
         didSet {
             objectWillChange.send(self)
         }
@@ -39,9 +40,7 @@ struct ViewController: View {
         if viewRouter.currentView == "view_book" {
             BookDetail(book: viewRouter.currentBook)
         }
-        if viewRouter.currentView == "view_page" {
-            PageDetail(page: viewRouter.currentPage)
-        }
+
         if viewRouter.currentView == "view_note" {
             NoteDetail(note: viewRouter.currentNote)
         }
@@ -54,4 +53,4 @@ struct ViewController_Previews: PreviewProvider {
         ViewController()
     }
 }
-*/
+

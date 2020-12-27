@@ -8,13 +8,14 @@ import SwiftUI
 
 struct BookDetail: View {
     @StateObject var book: Book
+    @StateObject private var env = ViewRouter()
     var body: some View {
         // Needs buttons to edit/delete
         //NavigationView {
         VStack {
             Text(book.title)
                 .font(.title)
-            NavigationLink(destination: ScanView()) { Text("New page") }
+            NavigationLink(destination: ScanView().environmentObject(env)) { Text("New page") }
         }
         if (book.pages!.count > 0) {
             ScrollView(.horizontal) {

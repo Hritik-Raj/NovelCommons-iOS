@@ -1,47 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:/Users/pdng/Novel Commons/Novel Commons/Models"
-      name = "Models">
-      <FileRef
-         location = "group:/Users/pdng/Novel Commons/Novel Commons/LaunchScreen.storyboard">
-      </FileRef>
-      <FileRef
-         location = "group:../../Config.xcconfig">
-      </FileRef>
-      <FileRef
-         location = "group:Note.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Book.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Page.swift">
-      </FileRef>
-      <FileRef
-         location = "group:/Users/pdng/Novel Commons/Novel Commons/Config.swift">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:/Users/pdng/Novel Commons/Novel Commons/Views"
-      name = "Views">
-      <FileRef
-         location = "group:PageDetail.swift">
-      </FileRef>
-      <FileRef
-         location = "group:SearchBarView.swift">
-      </FileRef>
-      <FileRef
-         location = "group:LibraryView.swift">
-      </FileRef>
-      <FileRef
-         location = "group:NoteDetail.swift">
-      </FileRef>
-      <FileRef
-         location = "group:BookDetail.swift">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "group:/Users/hritikraj/Desktop/updated_value/novelc-ios/Novel Commons/AnnotatePageView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../Novel Commons/LaunchScreen.storyboard">
+   </FileRef>
    <FileRef
       location = "self:">
    </FileRef>

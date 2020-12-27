@@ -8,29 +8,67 @@ import SwiftUI
 
 struct LibraryView: View {
     var body: some View {
-        NavigationView {
-            List(bookData) { book in
-                NavigationLink(destination: BookDetail(book: book)) {
+        VStack {
+            HStack {
+                Text("LIBRARY")
+                    .font(.title)
+                Button(action: {
+                    ScanView()
+                }) {
+                    Image(systemName: "plus")
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                }
+            }
+            
+            ForEach(bookData) { book in
                     VStack(alignment: .leading) {
-                        Image(book.cover!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(
-                                width: 150,
-                                alignment: .leading
-                            )
-                            //.scaleEffect(0.5)
-                            //.padding(0)
-                        Text(book.title)
-                            .font(.headline)
-                        Text("Pages annotated: " + String(book.pages!.count))
-                            .font(.footnote)
+                        HStack {
+                            Image(book.cover!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(
+                                    width: 150,
+                                    alignment: .leading
+                                )
+                            VStack {
+                                Text(book.title)
+                                    .font(.headline)
+                                Text(book.author)
+                                    .font(.headline)
+                                Button(action: {
+                                    // What to perform
+                                }) {
+                                    Text("NOTES")
+                                        .fontWeight(.bold)
+                                            .font(.title)
+                                            .padding()
+                                            .background(Color.blue)
+                                            .cornerRadius(15)
+                                            .foregroundColor(.white)
+                                            .padding(10)
+                                    // How the button looks like
+                                }
+                                
+                                Button(action: {
+                                    // What to perform
+                                }) {
+                                    Text("ISLAND")
+                                        .fontWeight(.bold)
+                                            .font(.title)
+                                            .padding()
+                                            .background(Color.blue)
+                                            .cornerRadius(15)
+                                            .foregroundColor(.white)
+                                            .padding(10)
+                                    // How the button looks like
+                                }
+                            }
                     }
                 }
             }
-            .navigationBarTitle(Text("Library"))
             // need button to create book
-        }
+    }
     }
 }
 

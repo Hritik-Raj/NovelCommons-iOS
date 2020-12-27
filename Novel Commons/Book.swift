@@ -37,7 +37,15 @@ let book1 = Book(
     ],
     cover: "working-in-public"
 )
-var bookData = [book1]
+
+let book2 = Book(
+    title: "Comprehension",
+    author: "Walter Kintsch",
+    pages: [Page(num:1, notes: [Note(id: 1, num: 2, text: "lolol.")])],
+    cover: "comprehension"
+)
+var bookData = [book1, book2]
+
 /*
 var book1 = Book()
     title: "Working in Public",

@@ -1,88 +1,78 @@
-//
-//  ScanViewController.swift
-//  
-//
-//  Created by Pudding on 12/5/20.
-//
-
 import SwiftUI
-import UIKit
-import Vision
 import VisionKit
+import Vision
 
-final class ScanViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
-    var textRecognitionRequest = VNRecognizeTextRequest(completionHandler: nil)
-    let textRecognitionWorkQueue = DispatchQueue(label: "TextRecognitionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
-    var previewView: UIView!
+struct ScanDocumentView: UIViewControllerRepresentable {
     
-    override func viewDidLoad() {
-        //super.viewDidLoad()
-        previewView = UIView(frame: CGRect(x: 0, y:0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
-        view.addSubview(previewView)
-        setupVision()
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var recognizedText: String
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(recognizedText: $recognizedText, parent: self)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        scanDocument()
+    func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
+        let documentViewController = VNDocumentCameraViewController()
+        documentViewController.delegate = context.coordinator
+        return documentViewController
     }
     
-    @objc
-    func scanDocument() {
-        let scanViewController = VNDocumentCameraViewController()
-        scanViewController.delegate = self
-        present(scanViewController, animated: true)
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
+        // nothing to do here
     }
     
-    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-        for pageNum in 0 ..< scan.pageCount {
-            let image = scan.imageOfPage(at: pageNum)
+    class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
+        var recognizedText: Binding<String>
+        var parent: ScanDocumentView
+        
+        init(recognizedText: Binding<String>, parent: ScanDocumentView) {
+            self.recognizedText = recognizedText
+            self.parent = parent
         }
         
-        controller.dismiss(animated: true)
-    }
-    func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
-        controller.dismiss(animated: true)
-    }
-    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
-        print(error)
-        controller.dismiss(animated: true)
-    }
-    
-    private func setupVision() {
-        textRecognitionRequest = VNRecognizeTextRequest { (request, error) in
-            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
-            var detectedText = ""
-            for observation in observations {
-                guard let topCandidate = observation.topCandidates(1).first else { return }
-                detectedText += topCandidate.string + "\n"
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+            let extractedImages = extractImages(from: scan)
+            let processedText = recognizeText(from: extractedImages)
+            recognizedText.wrappedValue = processedText
+            
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+        
+        fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage] {
+            var extractedImages = [CGImage]()
+            for index in 0..<scan.pageCount {
+                let extractedImage = scan.imageOfPage(at: index)
+                guard let cgImage = extractedImage.cgImage else { continue }
+                
+                extractedImages.append(cgImage)
             }
+            return extractedImages
         }
-        textRecognitionRequest.recognitionLevel = .accurate
         
-    }
-    
-    private func recognizeTextInImage(_ image: UIImage) {
-        guard let cgImage = image.cgImage else { return }
-        
-        textRecognitionWorkQueue.async {
-            let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-            do {
-                try requestHandler.perform([self.textRecognitionRequest])
-            } catch {
-                print(error)
+        fileprivate func recognizeText(from images: [CGImage]) -> String {
+            var entireRecognizedText = ""
+            let recognizeTextRequest = VNRecognizeTextRequest { (request, error) in
+                guard error == nil else { return }
+                
+                guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+                
+                let maximumRecognitionCandidates = 1
+                for observation in observations {
+                    guard let candidate = observation.topCandidates(maximumRecognitionCandidates).first else { continue }
+                    
+                    entireRecognizedText += "\(candidate.string)\n"
+                    
+                }
             }
+            recognizeTextRequest.recognitionLevel = .accurate
+            
+            for image in images {
+                let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+                
+                try? requestHandler.perform([recognizeTextRequest])
+            }
+            
+            return entireRecognizedText
         }
-    }
-    
-}
-extension ScanViewController: UIViewControllerRepresentable {
-    typealias UIViewControllerType = ScanViewController
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ScanViewController>) -> ScanViewController {
-        return ScanViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: ScanViewController, context: UIViewControllerRepresentableContext<ScanViewController>) {
     }
 }
